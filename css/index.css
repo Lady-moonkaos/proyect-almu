@@ -1,0 +1,1600 @@
+ * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        display: block;
+    }
+
+    p a {
+        display: inline;
+    }
+
+    img,
+    picture,
+    video,
+    iframe,
+    svg {
+        display: block;
+        width: 100%;
+        /* height: initial; */
+    }
+
+    svg {
+        fill: currentColor;
+    }
+
+    /*tipo de fuente y color de fondo de la web*/
+    body {
+
+        font-family: 'Poppins', sans-serif;
+        background-color: #edabdd96;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    /*posicionando la imagen de fondo de la web de momento*/
+  
+
+    /*centrar los elementos, todo el cuerpo centrado , responsi, margen de la contenedora princial */
+    .container {
+        max-width: 1200px;
+        margin: 0px auto;
+        display: grid;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: nowrap;
+
+    }
+
+    /*menu y links elementos*/
+    .menu {
+
+        position: relative;
+        top: 20px;
+        left: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+
+    }
+
+    /*menu en linea cupcakes, tartar, galletas, batidos*/
+    .menu-nav {
+        display: flex;
+        margin-bottom: 45px;
+        width: 100%;
+    }
+
+    /*logo lady moon kaos*/
+    .logo {
+        width: 150px;
+        border-radius: 20%;
+        border: 3px outset pink;
+
+
+
+    }
+
+    /*menu desplegable sin viñetas*/
+    .menu .navbar ul {
+        list-style: none;
+
+    }
+
+    /*posicion del menu , a la izquierda*/
+    .menu .navbar ul li {
+        position: relative;
+        float: left;
+
+    }
+
+    /*enlaces del menu*/
+    .menu .navbar ul li a {
+        font-size: 20px;
+        font-weight: 800;
+        padding: 20px;
+        margin-left: 1rem;
+        color: rgb(236, 37, 189);
+        border: 2px outset pink;
+        border-radius: 25%;
+        background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+        text-transform: uppercase;
+        text-align: center;
+        width: 100%;
+    }
+
+    /*color letras menu cuando pasas el cursor*/
+    .menu .navbar ul li a:hover {
+        color: rgb(245, 249, 247);
+        text-align: center;
+    }
+
+    /* hacerlo responsivo se oculta */
+    #menu {
+        display: none;
+    }
+
+    /*tamaño del icono del menu*/
+    .menu-icono {
+        width: 50px;
+    }
+
+    /*icono del menu, cabezera,  oculto*/
+    .menu label {
+        cursor: pointer;
+        display: none;
+    }
+
+
+
+    header {
+        background-image: url(/asset/ventana-pasteleria/ChatGPT-Image\ 26\ abr\ 2025\,\ 23_45_54.avif);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 150vh;
+        margin-top: 40px;
+    }
+
+
+    /*espacio de la cabecera texto  h1 y el carrusel*/
+    .header-content {
+
+        display: grid;
+        flex-flow: wrap;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        margin-top: -200px;
+        
+    }
+
+    /*espacio texto cabezera*/
+    .header-txt {
+        width: 100%;
+
+    }
+
+    /*tipo de letra h1 cabezera kguay*/
+    .header-txt h1 {
+        color: rgb(194, 70, 159);
+        font-size: 45px;
+        text-transform: uppercase;
+        margin: 10rem 0 2rem 0;
+        font-weight: 800;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*parrafo cabezera*/
+    .header-txt p {
+        font-size: 18px;
+        color: rgb(169, 53, 211);
+        font-weight: 600;
+        background-color: beige;
+        width: 100%;
+        padding: 1em;
+        border-radius: 1em;
+
+    }
+
+    /*cuando pasas el raton por encima cambia el degradado de color de los botones del parrafo cabecera*/
+    .header-txt p:hover {
+        background: linear-gradient(90deg, rgb(233, 126, 230) 0%, rgb(158, 218, 226) 100%);
+        color: white;
+        text-align: center;
+
+
+
+    }
+
+    /*carrousel de imagenes del header*/
+    /*container general del carusel*/
+    .Carrousel {
+        width: 80%;
+        min-height: 300px;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+        position: relative;
+        overflow: hidden;
+        margin: 15rem 0 7rem 4rem;
+    }
+
+    /*numero de imagenes, donde va la transicion, el grid y el transition */
+    .Carrousel-wrapper {
+        --num-imagenes: 5;
+
+        min-height: 200px;
+
+        display: grid;
+
+        transition: all 1s ease;
+
+    }
+
+    /*los botones del carrusel, tamaño , posicion, next, prev*/
+    .Carrousel-arrow {
+        --size: 3rem;
+        width: var(--size);
+        height: var(--size);
+        background-color: #29d3df;
+
+        position: absolute;
+        top: calc(50% - 2rem);
+        border-radius: 2rem;
+
+        cursor: pointer;
+        transition: transform .5s ease;
+    }
+
+
+    .Carrousel-arrow:hover {
+        transform: scale(1.1);
+    }
+    .carrousel-arrow:active {
+        transform: scale(0.9);
+    }
+    .Carrousel-arrow--prev {
+        left: 2rem;
+    }
+
+    .Carrousel-arrow--next {
+        right: 2rem;
+    }
+
+    .Carrousel-img {
+  
+        width: 100%;
+        padding: 1em;
+        border-radius: 1em;
+
+
+
+
+    }
+
+    .Carrousel-ul {
+        padding: 1rem;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .Carrousel-btn {
+        width: 3rem;
+        height: 3rem;
+        background-color: rgb(222, 202, 224);
+        color: rgb(227, 180, 215);
+        border-radius: 25%;
+        border: 3px outset pink;
+
+        cursor: pointer;
+        transition: transform .5s ease;
+
+    }
+
+    .Carrousel-btn:hover {
+        background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(78, 159, 177) 100%);
+    }
+
+    /*relacion botones y parrafo*/
+    .botones {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+
+        gap: 50px;
+
+        margin: 1rem 0 2rem 6.5rem;
+
+    }
+
+    /*color y estilo de los botones y texto comprar e informacion*/
+    .btn-1 {
+
+
+
+        color: white;
+        padding: 20px 33px 20px 33px;
+        margin-left: 1rem;
+        border: 2px outset pink;
+        border-radius: 25%;
+        background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+        text-align: center;
+    }
+
+    .btn-2 {
+
+        color: white;
+        padding: 20px;
+        margin-left: 1rem;
+        border: 2px outset pink;
+        border-radius: 25%;
+        background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+    }
+
+    /*cuando pasas el raton por encima cambia el degradado de color*/
+    .btn-1:hover {
+        background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(78, 159, 177) 100%);
+        color: black;
+    }
+
+    .btn-2:hover {
+        background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(255, 167, 0) 100%);
+        color: black;
+    }
+
+    /*tamaño del icono completo , icono en el centro y stylo container header*/
+    .icon {
+        width: 3rem;
+        margin: auto;
+
+
+    }
+
+    /*aqui termina el header y comienza el main*/
+    /*imagen de fondo de pantalla del main*/
+    main {
+        background-image: url(/asset/pasteleria/paisaje.png);
+        background-size: cover;
+        height: 130vh;
+        /* Cada sección ocupa toda la pantalla */
+
+    }
+
+    /*container del menu,espacio contenedor del main*/
+    .producto-menu {
+        min-height: 100px;
+        gap: 3rem;
+
+    }
+
+    /*titulo del menu del main pasteleria*/
+    .title {
+        font-weight: 800;
+        text-align: center;
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        color: rgb(194, 70, 159);
+        font-size: 45px;
+        text-transform: uppercase;
+        margin: 1rem 0 2rem 6rem;
+     
+    }
+/* menu navegador e imagen corZONES*/
+    .producto {
+        display: flex;
+        flex-flow: nowrap;
+        position: relative;
+        justify-content: space-between;
+        align-items: end;
+        padding: 1rem;
+    }
+    .container{
+        width: 100%;
+    }
+
+    /*icono corazon main*/
+    .img-corazon {
+
+        width: 150px;
+        display: flex;
+        position: relative;
+        margin: 20px;
+        justify-content: space-around;
+        align-items: end;
+    }
+
+    /*/links/texto del menu en el main  y color fondo CUPCAKES, TARTAS, GALLETAS*/
+    .tab {
+        position: relative;
+        float: left;
+        width: 30%;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 800;
+        padding: 20px;
+        margin-left: 1rem;
+        color: rgb(236, 37, 189);
+        border: 2px outset pink;
+        border-radius: 25%;
+        background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+        text-transform: uppercase;
+
+    }
+
+
+    /*links menu manin ,TAMAÑO cuando seleccionamos una pestaña DEL MENU.NAV el color*/
+    .tab.Active {
+        background: linear-gradient(90deg, cyan 0%, violet 100%);
+        color: white;
+        width: 100%;
+
+    }
+
+    /* java scrip la informacion de los productos*/
+    .tab.Active::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+    }
+
+    /*esconder el menu y los productos*/
+    .tab-content {
+        display: none;
+        justify-content: start;
+
+
+    }
+
+    /*javascrip*/
+    .tab-content.Visible {
+        display: initial;
+    }
+
+    /*el grid con todos los productos, cuantas columnas*/
+    .box-container-1,
+    .box-container-2,
+    .box-container-3,
+    .box-container-4 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        align-items: center;
+        gap: 1rem;
+    
+    }
+
+    /*imagen de fondo del grid mariposas, borde de las columnas, sombras columnas*/
+    .box-1,
+    .box-2,
+    .box-3,
+    .box-4 {
+        background-image: url(/asset/iconos/logos2/luxa.org-opacity-changed-._butterflies_5642019.png);
+        background-position: center center;
+        background-color: rgb(240, 184, 231);
+        background-size: contain;
+        border-radius: 5%;
+        z-index: 1000;
+        box-shadow: 0 5px 10px rgb(71, 200, 229);
+        opacity: 80%;
+      padding: 1rem;
+
+
+      max-height: 60rem;
+        cursor: pointer;
+        transition: transform .5s ease;
+    
+    }
+
+.box-1,
+.box-2,
+.box-3,
+.box-4:hover {
+    transform: scale(1.1);
+}
+
+.box-1,
+.box-2,
+.box-3,
+.box-4:active {
+    transform: scale(0.9);
+}
+
+
+
+    .box1:nth-child(1),
+    .box1:nth-child(2),
+    .box1:nth-child(3),
+    .box1:nth-child(4) {
+        display: inline-block;
+    }
+
+    .box2:nth-child(1),
+    .box2:nth-child(2),
+    .box2:nth-child(3),
+    .box2:nth-child(4) {
+        display: inline-block;
+    }
+
+    .box3:nth-child(1),
+    .box3:nth-child(2),
+    .box3:nth-child(3),
+    .box3:nth-child(4) {
+        display: inline-block;
+    }
+
+    /*cambia el color al  pasar por encima de las columnas*/
+    .box-1:hover,
+    .box-2:hover,
+    .box-3:hover,
+    .box-4:hover {
+        background: linear-gradient(90deg, rgb(102, 240, 233) 0%, rgb(78, 159, 177) 100%);
+
+    }
+
+    /*propiedades de imagen respecto al parrafo del producto*/
+    .imagen {
+
+        width: 100%;
+        min-height: 200px;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+    }
+
+    /*caracteristicas imagen de arriba, productos*/
+    .imagen img {
+      
+        border-radius: 25%;
+        width: 90%;
+        text-align: center;
+    }
+
+    /*titulo de los productos*/
+    .content h3 {
+        font-size: 20px;
+        color: rgb(175, 7, 175);
+        font-weight: 800;
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    /*parrafo de los productos*/
+    .content p {
+        font-size: 14px;
+        color: rgb(8, 8, 10);
+        line-height: 1.8;
+        padding: 15px 0;
+        font-weight: 600
+    }
+
+    .content p:hover {
+        color: rgb(110, 14, 151);
+        font-weight: 800;
+        text-transform: capitalize;
+
+    }
+
+    /*caja de botones del menu, alrededor de los botones*/
+    .botones {
+        color: pink;
+        display: flex;
+        width: 20%;
+
+    }
+
+    /*separacion del precio debajo del parrafo, por una linea de color negro, icono-imagen alineada a la derecha*/
+    .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        margin-top: 20px;
+        padding-top: 15px;
+        border-top: 1px solid rgb(234, 12, 212);
+    }
+
+    /*posicion color y tamaño del precio*/
+    .price {
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(234, 13, 190);
+    }
+
+    /*borde solido alrededor del la imagen botton*/
+    .buy {
+        padding: 10px;
+        border-radius: 50%;
+        background: linear-gradient(90deg, violet 0%, cyan 100%);
+
+    }
+
+    /*efecto de color al pasar el raton por encima de la caja*/
+    .buy:hover {
+        background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(255, 167, 0) 100%);
+        border-color: rgb(13, 183, 221);
+    }
+
+    /*propiedades imagen de abajo, producto*/
+    .imagenbuy {
+
+        width: 50px;
+        border-radius: 50%;
+
+    }
+
+    /*el borde de la palabra cargar mas, contenedora*/
+    .load-more {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 3rem 0px 2rem 0;
+        display: block;
+        gap: 20px;
+        width: 100%;
+        border-radius: 25px;
+        border: 1px solid darkmagenta;
+        color: rgb(115, 17, 132);
+        cursor: pointer;
+
+    }
+
+    /*efecto de color al pasar el raton por encima del boton load more*/
+    .load-more:hover {
+        background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(78, 159, 177) 100%);
+        border-color: rgb(13, 183, 221);
+        color: white;
+    }
+
+    /*imagen de la cja contenedora de la info contenedora ,posicionar en*/
+    .info {
+        background-image: url(/asset/pasteleria/pasteleria-kawaii-%286%29.jpg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px;
+        height: 90vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+    }
+
+    /*CONTAINER DEL INFORAMCION, botones y TEXTO ARRIBA*/
+    .info-txt {
+        width: 100%;
+
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+
+    }
+
+    /*propiedades h2 section INFORMACION*/
+    .info-txt h2 {
+        color: rgb(194, 70, 159);
+        font-size: 45px;
+        text-transform: uppercase;
+        margin-bottom: 50px;
+        font-weight: 800;
+        padding: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /*propiedades del parrafo del section INFORMACON ARRIBA*/
+    .info-txt p {
+        width: 100%;
+        font-size: 20px;
+        color: rgb(8, 8, 10);
+        margin-bottom: 25px;
+    }
+
+    /*el display que coloca los elementos al lado*/
+    .info-sec {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1em;
+
+    }
+
+    /*los botones de alergenos, recetas y libro pdf , propiedades iconos, texto, container*/
+    .info-1 {
+
+        width: 25%;
+        padding: 18px 30px 18px 30px;
+        margin-left: 1rem;
+        border: 2px outset pink;
+        border-radius: 25%;
+        background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+        text-align: center;
+    }
+
+
+    /*cuando pasas el raton por encima cambia el degradado de color de los botones del panel de informacion*/
+    .info-1:hover {
+        background: linear-gradient(90deg, rgb(171, 235, 200) 0%, rgb(148, 216, 231) 100%);
+    }
+
+    /*iconos de informacion*/
+    .info-1 img {
+        width: 20%;
+        margin: auto;
+
+
+    }
+
+    .info-2 {
+        margin-left: 25px;
+
+
+    }
+
+    /*titulo del parrafo del menu informacion de abajo*/
+    .info-2 h3 {
+        color: rgb(189, 22, 211);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 800;
+
+
+    }
+
+    /*parrafo del menu informacion de abajo*/
+    .info-2 p {
+        color: rgb(194, 70, 159);
+        font-size: 1rem;
+        font-weight: 800;
+
+    }
+
+    /*imagen de la ventana propiedades de las redes sociales*/
+    .info-img {
+        position: absolute;
+        right: -55px;
+        top: -103px;
+    }
+
+    .info-img img {
+        width: 650px;
+    }
+
+    /*propiedades contenedora del footer*/
+    .footer {
+        padding: 100px 0 100px 0;
+        display: flex;
+
+
+    }
+
+    /*propiedades del footer, espacio entre columnas*/
+    .pie.container {
+        display: flex;
+        justify-content: space-between;
+        gap: 1em;
+        width: 100%;
+        margin-top: 2vh;
+        min-height: 40vh;
+
+    }
+
+    /*logo del footer*/
+    .logo-2 {
+        width: 200px;
+    }
+
+    /*titulo columnas footer, tiendas, eventos, */
+    h4 {
+
+        color: rgb(194, 70, 159);
+        font-size: 1.5rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+
+    }
+
+    /*columnas enlaces links footer*/
+    .links ul li a {
+        color: blue;
+        font-size: 16px;
+        margin-bottom: 5px;
+
+    }
+
+    .links ul li a:hover {
+        background: linear-gradient(90deg, rgb(24, 229, 116) 0%, rgb(78, 159, 177) 100%);
+        color: white;
+    }
+
+    .sociales {
+
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+
+    }
+
+    /*la contenerdores de las imagenes del futer, tamaño iconos redes sociales*/
+    .social {
+        margin: 0 10px;
+        height: 60px;
+        width: 60px;
+        border: 1px solid darkmagenta;
+        border-radius: 50%;
+
+
+    }
+
+    /*color al pasar el raton por encima de los iconos*/
+    .social:hover {
+        background-color: rgb(11, 202, 212);
+    }
+
+    /*iconos redes sociales*/
+    .social img {
+        margin: 8px 0 0 8px;
+        width: 40px;
+
+    }
+
+
+
+
+
+
+
+
+    /*responsive*/
+
+
+    @media(max-width:1250px) {
+        .menu {
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1000;
+            margin: 0px 0 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0px auto;
+
+        }
+
+        .header-txt {
+            width: 100%;
+        }
+
+        .Carrousel {
+            width: 70%;
+        }
+
+        .Carrousel-wrapper {
+            margin-right: 300px;
+        }
+
+        main {
+
+            height: 150vh;
+            /* Cada sección ocupa toda la pantalla */
+
+        }
+
+        .info {
+            width: 100%;
+            padding: 30px;
+            height: 130vh;
+        }
+    }
+
+    @media(max-width:1244px) {
+
+        .box-container-1,
+        .box-container-2,
+        .box-container-3,
+        .box-container-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 2fr));
+            align-items: center;
+
+            gap: 2rem;
+
+        }
+
+
+    }
+
+
+    @media(max-width:899px) {
+
+        .menu {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menu-icono {
+            width: 80px;
+
+
+        }
+
+        .menu label {
+            display: initial;
+
+        }
+
+        /*menu cupcakes, tartas , batidos, galletas*/
+        .menu-nav {
+            text-align: center;
+
+        }
+
+        /*fondo, alto y ancho del menu inicio servicios contactos*/
+        .menu .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, rgb(237, 134, 234) 0%, rgb(200, 123, 233) 100%);
+            display: none;
+
+
+
+
+
+        }
+
+
+        .menu .navbar ul li {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+
+
+        }
+
+        /*ancho de las celdas de los enlaces del menu en responsive*/
+        .menu .navbar ul li a:hover {
+            background: linear-gradient(90deg, rgb(239, 175, 237) 0%, rgb(6, 213, 196) 100%);
+        }
+
+        /*color de las secciones del menu cuando pasas el raton por encima en el modo responsive*/
+
+        .menu .navbar ul li a:hover {
+            color: rgb(236, 239, 241);
+
+
+        }
+
+
+        /*para que al pulsar el icono del menu aparezca y se despliege*/
+        #menu:checked~.navbar {
+            display: initial;
+        }
+
+        main {
+            height: 246vh;
+        }
+
+        /*carrousel de imagenes del header*/
+        /*container general del carusel*/
+        .Carrousel {
+            width: 70%;
+            margin: 100px;
+            padding: 20px;
+        }
+
+
+        /*imagen carrusel*/
+        .Carrousel-img {
+            width: 100%;
+            height: 70vh;
+            gap: 1rem;
+        }
+
+
+        /*contenedora de los botones mdod responsive*/
+        .botones {
+            margin-left: 25%;
+            align-items: center;
+            text-align: center;
+        }
+
+
+        /*pasar por encima de los botones modo responsive*/
+        .botones:hover {
+            align-items: center;
+            text-align: center;
+            border: 0px outset rgb(247, 3, 235);
+
+        }
+
+        /*cuando pasas el raton por encima cambia el degradado de color*/
+        .btn-1:hover {
+            background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(197, 125, 17) 100%);
+        }
+
+        .btn-2:hover {
+            background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(20, 193, 237) 100%);
+        }
+
+        .header-img {
+            width: 100%;
+            margin-top: 45px;
+
+        }
+
+        .producto.menu {
+
+            width: 50px
+        }
+
+        /*icono del corazon oculto*/
+        .img-corazon {
+            display: none;
+
+        }
+
+        /*titulos de los productos cupcakes, tartas, batidos, modo responsive*/
+        .menu-nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 80%
+        }
+
+        .tab {
+
+            margin-bottom: 25px;
+            align-content: center;
+        }
+
+        /*caja contenedora de los productos cuando encojemos la pagina el min max determina el responsive*/
+        .box-container-1,
+        .box-container-2,
+        .box-container-3,
+        .box-container-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            align-items: center;
+            margin: 20px;
+            gap: 2rem;
+
+
+        }
+
+        .box-1,
+        .box-2,
+        .box-3,
+        .box-4 {
+            width: 100%;
+            align-content: center;
+        }
+
+        .box .imagen {
+            width: 100%;
+        }
+
+        .info {
+            width: 100%;
+            padding: 30px;
+            height: 130vh;
+        }
+
+        /*texto h2 informacion caja contenerdora*/
+        .info-txt h2 {
+            font-size: 40px;
+
+        }
+
+        .info-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .info-txt {
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .info-txt p {
+            margin-bottom: 5px;
+
+        }
+
+        /*parrafos y tituos en columna section footer*/
+
+
+        .info-1 {
+            width: 60%;
+
+            margin-left: 1rem;
+            border: 2px outset pink;
+            border-radius: 25%;
+            background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+            text-align: center;
+        }
+
+        .info-2 {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+
+        .info-img img {
+            display: none;
+        }
+
+        /*contenedora iconos redes sociales*/
+        .sociales {
+            justify-content: center;
+
+        }
+
+        .social img {
+            width: 3rem;
+            margin: 8px 0 0 0;
+        }
+
+        .imagen img {
+            max-width: 150px;
+        }
+
+        img {
+            width: 8rem;
+        }
+
+        /*imagen icono de los globos*/
+        img {
+            width: 20%;
+
+
+        }
+
+        /*footer en columna manera responsiva*/
+        .footer {
+            padding: 30px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .links h4 {
+            margin: 25px 0 10px 0;
+        }
+    }
+
+
+    @media(max-width:860px) {
+
+        main {
+            height: 350vh;
+        }
+
+        .info {
+            height: 200vh;
+        }
+
+        /*parrafos y tituos en columna section footer*/
+        .info-sec {
+            flex-direction: column;
+            padding: 0px 35px;
+        }
+
+
+
+    }
+
+    /*iconos de informacion*/
+    @media(max-width:818px) {
+        .info-1 img {
+            width: 18%;
+
+        }
+
+        .footer.container {
+            display: flex;
+            justify-content: space-between;
+            gap: 1em;
+            width: 100%;
+            margin-top: 28vh;
+
+        }
+    }
+
+
+    /*logo lady moon kaos*/
+
+    @media(max-width:743px) {
+        main {
+            height: 450vh;
+        }
+
+        .logo {
+            display: none;
+
+
+        }
+    }
+
+
+
+    @media(max-width:550px) {
+
+        .menu {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menu-icono {
+            width: 80px;
+
+
+        }
+
+        .menu label {
+            display: initial;
+
+        }
+
+        /*menu cupcakes, tartas , batidos, galletas*/
+        .menu-nav {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        /*fondo, alto y ancho del menu inicio servicios contactos*/
+        .menu .navbar {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            width: 100%;
+            padding: 10px;
+            background: linear-gradient(90deg, rgb(237, 134, 234) 0%, rgb(200, 123, 233) 100%);
+            display: none;
+            width: 100%;
+
+
+
+
+        }
+
+
+        .menu .navbar ul li {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+            text-align: center;
+
+
+        }
+
+        /*ancho de las celdas de los enlaces del menu en responsive*/
+        .menu .navbar ul li a:hover {
+            background: linear-gradient(90deg, rgb(239, 175, 237) 0%, rgb(6, 213, 196) 100%);
+        }
+
+        /*color de las secciones del menu cuando pasas el raton por encima en el modo responsive*/
+
+        .menu .navbar ul li a:hover {
+            color: rgb(236, 239, 241);
+
+
+        }
+
+
+        /*para que al pulsar el icono del menu aparezca y se despliege*/
+        #menu:checked~.navbar {
+            display: initial;
+        }
+
+        main {
+            height: 520vh;
+        }
+
+        /*carrousel de imagenes del header*/
+        /*container general del carusel*/
+        .Carrousel {
+            width: 80%;
+
+        }
+
+        /*imagen carrusel*/
+        .Carrousel-img {
+            height: 70vh;
+
+
+        }
+
+
+        /*contenedora de los botones mdod responsive*/
+        .botones {
+
+            align-items: center;
+            text-align: center;
+        }
+
+
+        /*pasar por encima de los botones modo responsive*/
+        .botones:hover {
+            align-items: center;
+            text-align: center;
+            border: 0px outset rgb(247, 3, 235);
+
+        }
+
+        /*cuando pasas el raton por encima cambia el degradado de color*/
+        .btn-1:hover {
+            background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(197, 125, 17) 100%);
+        }
+
+        .btn-2:hover {
+            background: linear-gradient(90deg, rgb(255, 0, 247) 0%, rgb(20, 193, 237) 100%);
+        }
+
+        .header-img {
+            width: 100%;
+            margin-top: 45px;
+
+        }
+
+        .producto.menu {
+
+            width: 50px
+        }
+
+        /*icono del corazon oculto*/
+        .img-corazon {
+            display: none;
+
+        }
+
+        /*titulos de los productos cupcakes, tartas, batidos, modo responsive*/
+        .menu-nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 80%
+        }
+
+        .tab {
+
+            margin-bottom: 25px;
+            align-content: center;
+        }
+
+        /*caja contenedora de los productos cuando encojemos la pagina el min max determina el responsive*/
+        .box-container-1,
+        .box-container-2,
+        .box-container-3,
+        .box-container-4 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            align-items: center;
+            margin: 20px;
+            gap: 2rem;
+
+
+        }
+
+        .box-1,
+        .box-2,
+        .box-3,
+        .box-4 {
+            width: 100%;
+            align-content: center;
+        }
+
+        .box .imagen {
+            width: 100%;
+        }
+
+        .info {
+            width: 100%;
+            padding: 30px;
+            height: 280vh;
+        }
+
+        /*texto h2 informacion caja contenerdora*/
+        .info-txt h2 {
+            font-size: 40px;
+
+        }
+
+        .info-content {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .info-txt {
+            width: 100%;
+            margin-top: 0px;
+        }
+
+        .info-txt p {
+            margin-bottom: 5px;
+
+        }
+
+        /*parrafos y tituos en columna section footer*/
+
+
+        .info-1 {
+            width: 60%;
+
+            margin-left: 1rem;
+            border: 2px outset pink;
+            border-radius: 25%;
+            background: linear-gradient(90deg, rgb(229, 214, 229) 0%, rgb(225, 197, 223) 100%);
+            text-align: center;
+        }
+
+        .info-2 {
+            margin-top: 10px;
+            margin-left: 0;
+        }
+
+        .info-img img {
+            display: none;
+        }
+
+        /*contenedora iconos redes sociales*/
+        .sociales {
+            justify-content: center;
+
+        }
+
+        .social img {
+            width: 3rem;
+            margin: 8px 0 0 0;
+        }
+
+        .imagen img {
+            max-width: 150px;
+        }
+
+        img {
+            width: 8rem;
+        }
+
+        /*imagen icono de los globos*/
+        img {
+            width: 20%;
+
+
+        }
+
+        /*footer en columna manera responsiva*/
+        .footer {
+            padding: 30px;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .links h4 {
+            margin: 25px 0 10px 0;
+        }
+    }
+
+    @media(max-width:430px) {
+
+        .menu {
+            width: 100%;
+            padding: 20px;
+        }
+
+        .menu-icono {
+            width: 80px;
+
+
+        }
+
+        .menu label {
+            display: initial;
+
+        }
+
+        main {
+            height: 520vh;
+        }
+
+        /*carrousel de imagenes del header*/
+        /*container general del carusel*/
+        .Carrousel {
+            width: 80%;
+            margin: auto;
+            bottom: 30px;
+
+        }
+
+     
+        /*contenedora de los botones mdod responsive*/
+
+        .botones{
+            margin: 2rem -1.5rem 4rem 0;
+            align-items: center;
+            text-align: center;
+        }
+       
+
+        /*parrafo de texto*/
+        .header-txt {
+            width: 80%;
+            margin-left: 30px;
+            font-size: 15px;
+
+        }
+
+        .header-img {
+            width: 100%;
+
+
+        }
+
+        .producto.menu {
+
+            width: 50px
+        }
+
+        /*icono del corazon oculto*/
+        .img-corazon {
+            display: none;
+
+        }
+
+        /*titulos de los productos cupcakes, tartas, batidos, modo responsive*/
+        .menu-nav {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 80%
+        }
+
+        .tab {
+            width: 100%;
+            margin-bottom: 25px;
+            align-content: center;
+        }
+
+        /*caja contenedora de los productos cuando encojemos la pagina el min max determina el responsive*/
+            .box-container-1,
+            .box-container-2,
+            .box-container-3,
+            .box-container-4 {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                align-items: center;
+                margin: 20px;
+                gap: 2rem;
+                width: 70%;
+    
+    
+            }
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    
